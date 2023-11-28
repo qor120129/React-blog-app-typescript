@@ -14,11 +14,11 @@ export default function PostForm() {
         </div>
         <div className="form__block">
           <label htmlFor="content">내용</label>
-          <textarea name="content" id="content"  rows={25} required ></textarea>
+          <textarea name="content" id="content" rows={25} required ></textarea>
         </div>
         <div className="form__btns">
-          <Link to="/" className="form__btn">취소</Link>
-          <input type="submit" value="제출" className="form__btn form__btn-submit"/>
+          <Link to="/" ><button type="button">취소</button></Link>
+          <button type="submit" className="btn__highlight">제출</button>
         </div>
       </form>
     </>
