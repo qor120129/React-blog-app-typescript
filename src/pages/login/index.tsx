@@ -1,6 +1,13 @@
+import Header from "components/Header";
+import LoginFrom from "components/LoginFrom";
+
+
 export default function LogInPage() {
   return (
-    <h1>LogIn</h1>
+    <>
+      <Header />
+      <LoginFrom />
+    </>
   )
 
 }

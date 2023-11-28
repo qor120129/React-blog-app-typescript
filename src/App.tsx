@@ -1,12 +1,19 @@
 import './App.css';
+import { useState } from 'react';
+import {app} from 'firebaseApp'
+import {getAuth} from 'firebase/auth'
 import Router from 'components/Router'
 
 function App() {
+  const auth = getAuth(app)
+
+  const [isAuthenticated, setIsAuthenticated] = useState(!!auth.currentUser)
   return (
     <div>
-      <Router></Router>
+      <Router isAuthenticated={isAuthenticated}></Router>
     </div>
   )
 }
 
 export default App;
+

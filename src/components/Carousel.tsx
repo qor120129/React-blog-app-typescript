@@ -13,9 +13,9 @@ export default function Carousel() {
       <div className="carousel">
         <div className="carousel__slides">
           {(images).map((img, index) => (
-            <>
+            <div key={index}>
               <input type="radio" name="radio-btn" checked={activeImage === index} readOnly />
-              <div key={index} className="carousel__slide-container">
+              <div className="carousel__slide-container">
                 <div className="carousel__slide-img">
                   <img src={img} alt={`slide${index}`} />
                 </div>
@@ -29,11 +29,11 @@ export default function Carousel() {
                 </div>
               </div>
               <div className="carousel__slide">
-              </div></>
+              </div></div>
           ))}
           <div className="carousel__dots">
             {[...Array(images.length)].map((e, index) => (
-              <label className={"carousel__dot" + (activeImage === index ? " active" : '')} onClick={() => { setActiveImage(index) }} ></label>
+              <label  key={index} className={"carousel__dot" + (activeImage === index ? " active" : '')} onClick={() => { setActiveImage(index) }} ></label>
             ))}
           </div>
         </div>
