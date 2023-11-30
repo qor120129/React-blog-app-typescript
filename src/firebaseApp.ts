@@ -15,6 +15,8 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
+
+// Firebase 앱 초기화 
 try{
   app = getApp('app')
 }catch(e){

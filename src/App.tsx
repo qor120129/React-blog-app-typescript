@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect, useState } from 'react';
 import Router from 'components/Router'
 import { app } from 'firebaseApp'
@@ -9,6 +8,7 @@ import Loader from 'components/Loader';
 
 function App() {
   const auth = getAuth(app)
+  
 // auth 체크전 initialize 전에 loader 보여주기
   const [init, setInit] = useState<boolean>(false)
 
